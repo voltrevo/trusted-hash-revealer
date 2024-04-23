@@ -1,6 +1,6 @@
 # trusted-hash-revealer
 
-Deployed: https://trusted-hash-revealer.deno.dev/keccak256
+Deployed at `https://trusted-hash-revealer.deno.dev`.
 
 ## About
 
