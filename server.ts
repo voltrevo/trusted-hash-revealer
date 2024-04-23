@@ -18,6 +18,12 @@ const kv = await Deno.openKv();
 serve(async (req) => {
   const url = new URL(req.url);
 
+  if (req.url === "/") {
+    return Response.redirect(
+      "https://github.com/voltrevo/trusted-hash-revealer",
+    );
+  }
+
   if (req.method !== "POST" || url.pathname !== "/keccak256") {
     return new Response("not found", {
       status: 404,

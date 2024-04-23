@@ -1,5 +1,9 @@
 # trusted-hash-revealer
 
+Deployed: https://trusted-hash-revealer.deno.dev/keccak256
+
+## About
+
 Suppose Alice has provided Bob with `hash(messageFromAlice)` and Bob has
 provided Alice with `hash(messageFromBob)`.
 
@@ -54,11 +58,6 @@ For example usage, see `./manualTests/alice.ts` and `./manualTests/bob.ts`. Run
 them concurrently to see the output:
 
 ```
-$ deno run --allow-net server.ts 
-Listening on http://localhost:8000/
-```
-
-```
 $ ./manualTests/alice.ts
 OOR6e3GdzmNmKur0NEAyb1Ubin7hmM7jXLXVF_LSlqI :: bob
 ```
@@ -67,3 +66,6 @@ OOR6e3GdzmNmKur0NEAyb1Ubin7hmM7jXLXVF_LSlqI :: bob
 $ ./manualTests/bob.ts  
 nAJXEU65OZophfjnXa12AMXYn-OCT_qZ7Bw-uL87BQE :: alice
 ```
+
+(This uses the deno deployed version, edit `manualTests/src/config.ts` to use
+your instance instead.)
