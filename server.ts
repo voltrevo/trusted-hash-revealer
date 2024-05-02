@@ -113,6 +113,11 @@ serve(async (req) => {
 
   return new Response(
     JSON.stringify(preimages.map((buf) => encodeBase64Url(buf))),
+    {
+      headers: {
+        "access-control-allow-origin": "*",
+      }
+    },
   );
 });
 
